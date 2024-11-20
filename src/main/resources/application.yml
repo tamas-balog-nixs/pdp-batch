@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    username: root
+    url: jdbc:mysql://localhost:3306/pdp?allowPublicKeyRetrieval=true&useSSL=false
+    password: test@123
+  batch:
+    jdbc:
+      initialize-schema: ALWAYS
+batch:
+  page:
+    basic-chunk-size: 10
+  import-product:
+    input-file-path: "src/main/resources/importProduct-sample.csv"
+  export-product:
+    export-file-path: "src/main/resources/exportProduct.csv"
